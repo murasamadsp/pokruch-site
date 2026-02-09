@@ -5,7 +5,7 @@ export default defineConfig({
 	root: "src",
 	base: "/pokruch-site/",
 	build: {
-		outDir: "dist",
+		outDir: "../dist",
 		emptyOutDir: true,
 	},
 	plugins: [
