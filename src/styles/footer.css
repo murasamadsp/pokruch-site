@@ -96,7 +96,8 @@
 	}
 }
 
-.footer__link:hover {
+.footer__link:hover,
+.footer__link:active {
 	color: var(--color-accent);
 	transform: translateY(-3px);
 }

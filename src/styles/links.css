@@ -36,7 +36,8 @@
 	fill: currentColor;
 }
 
-.links__item:hover {
+.links__item:hover,
+.links__item:active {
 	border-color: var(--color-accent);
 	color: var(--color-background);
 	background-color: var(--color-accent);

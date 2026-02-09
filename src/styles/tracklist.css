@@ -18,7 +18,8 @@
 	overflow: hidden;
 }
 
-.track:hover {
+.track:hover,
+.track:active {
 	border-color: rgba(132, 236, 142, 0.3);
 	transform: translateY(-2px);
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -35,7 +36,8 @@
 	transition: height var(--transition-base);
 }
 
-.track:hover::before {
+.track:hover::before,
+.track:active::before {
 	height: 100%;
 }
 

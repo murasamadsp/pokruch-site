@@ -22,7 +22,8 @@
 	transition: color var(--transition-fast);
 }
 
-.header__logo:hover {
+.header__logo:hover,
+.header__logo:active {
 	color: var(--color-white);
 }
 
@@ -88,6 +89,7 @@
 }
 
 .header__nav-link:hover,
+.header__nav-link:active,
 .header__nav-link.active {
 	color: var(--color-accent);
 }
