@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
 
 		<title>Покруч — Презентує альбом</title>
-		<!-- <meta
+		<meta
 			name="description"
 			content="Покруч — український музичний гурт. Слухай музику, дивись виступи та підписуйся в соцмережах." >
 		<meta name="keywords" content="Покруч, pokruch, український гурт, музика, рок, інді" >
@@ -14,7 +14,7 @@
 		<meta property="og:title" content="Покруч — український музичний гурт" >
 		<meta
 			property="og:description"
-			content="Покруч — український музичний гурт. Слухай музику, дивись виступи та подписуйся в соцмережах." >
+			content="Покруч — український музичний гурт. Слухай музику, дивись виступи та підписуйся в соцмережах." >
 		<meta property="og:image" content="assets/images/logos/pkrch.png" >
 		<meta property="og:locale" content="uk_UA" >
 
@@ -26,9 +26,10 @@
 		<meta name="twitter:image" content="assets/images/logos/pkrch.png" >
 
 		<link rel="icon" type="image/png" href="assets/images/logos/pkrch.png" >
-		<link rel="canonical" href="https://pokruch.band/" > -->
+		<link rel="canonical" href="https://pokruch.band/" >
 
 		<link rel="preload" as="image" href="assets/images/logos/pkrch.png" >
+		<link rel="preload" as="image" href="assets/images/backgrounds/hero.webp" type="image/webp" >
 	<link rel="preconnect" href="https://fonts.googleapis.com" >
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
 		<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet" >
@@ -36,7 +37,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" >
 		<link rel="stylesheet" href="styles/styles.css" >
 
-		<!-- <script type="application/ld+json">
+		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
 				"@type": "MusicGroup",
@@ -48,20 +49,27 @@
 					"https://www.twitch.tv/pokruch.band"
 				]
 			}
-		</script> -->
+		</script>
 	</head>
 	<body>
-		<header class="header visually-hidden">
+		<a class="skip-link" href="#main">Перейти до основного контенту</a>
+		<header class="header">
 			<div class="container header__inner">
 				<a href="/" class="header__logo">Покруч</a>
-				<nav class="header__nav" id="headerNav">
+				<nav class="header__nav" id="headerNav" aria-label="Основна навігація">
 					<ul class="header__nav-list">
+						<li><a href="#music" class="header__nav-link">Головна</a></li>
 						<li><a href="#listen" class="header__nav-link">Слухати</a></li>
 						<li><a href="#about" class="header__nav-link">Про альбом</a></li>
 						<li><a href="#tracks" class="header__nav-link">Треки</a></li>
 					</ul>
 				</nav>
-				<button class="header__menu-btn" id="menuBtn" aria-label="Меню" aria-expanded="false">
+				<button
+					class="header__menu-btn"
+					id="menuBtn"
+					aria-label="Меню"
+					aria-expanded="false"
+					aria-controls="headerNav">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -69,12 +77,28 @@
 			</div>
 		</header>
 
-		<main>
+		<main id="main">
 			<section id="music" class="hero">
-				<div class="hero__bg"></div>
+				<picture class="hero__bg" aria-hidden="true">
+					<source srcset="assets/images/backgrounds/hero.webp" type="image/webp" >
+					<img
+						src="assets/images/backgrounds/hero.jpg"
+						alt=""
+						width="7000"
+						height="3500"
+						fetchpriority="high"
+						decoding="async" >
+				</picture>
 				<div class="hero__content">
 					<h1 class="hero__title">
-						<img class="hero__image" src="assets/images/logos/pkrch.png" alt="Покруч" fetchpriority="high" >
+						<img
+							class="hero__image"
+							src="assets/images/logos/pkrch.png"
+							alt="Покруч"
+							width="2265"
+							height="594"
+							fetchpriority="high"
+							decoding="async" >
 					</h1>
 					<h3 class="hero__subtitle">Презентує альбом</h3>
 					<h2 class="hero__heading">ПКРЧ Голосними</h2>
@@ -84,19 +108,19 @@
 			<section id="listen" class="album container">
 				<div class="album__links">
 					<a href="https://open.spotify.com" class="links__item" target="_blank" rel="noopener noreferrer">
-						<svg class="icon" viewBox="0 0 24 24">
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 							<use href="assets/images/icons/sprite.svg#spotify"></use>
 						</svg>
 						Spotify
 					</a>
 					<a href="https://music.apple.com" class="links__item" target="_blank" rel="noopener noreferrer">
-						<svg class="icon" viewBox="0 0 24 24">
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 							<use href="assets/images/icons/sprite.svg#apple-music"></use>
 						</svg>
 						Apple Music
 					</a>
 					<a href="https://music.youtube.com" class="links__item" target="_blank" rel="noopener noreferrer">
-						<svg class="icon" viewBox="0 0 24 24">
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 							<use href="assets/images/icons/sprite.svg#youtube-music"></use>
 						</svg>
 						YouTube Music
@@ -221,7 +245,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Instagram">
-								<svg class="icon" viewBox="0 0 24 24">
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 									<use href="assets/images/icons/sprite.svg#instagram"></use>
 								</svg>
 							</a>
@@ -233,7 +257,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Facebook">
-								<svg class="icon" viewBox="0 0 24 24">
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 									<use href="assets/images/icons/sprite.svg#facebook"></use>
 								</svg>
 							</a>
@@ -245,7 +269,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="YouTube">
-								<svg class="icon" viewBox="0 0 24 24">
+								<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 									<use href="assets/images/icons/sprite.svg#youtube"></use>
 								</svg>
 							</a>

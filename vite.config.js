@@ -17,7 +17,6 @@ export default defineConfig({
 			},
 			svgo: {
 				plugins: [
-					{ name: "removeViewBox" },
 					{ name: "removeEmptyAttrs" },
 				],
 			},

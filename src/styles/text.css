@@ -9,7 +9,7 @@
 	text-shadow:
 		0 1px 0 rgba(255, 255, 255, 0.5),
 		0 2px 4px rgba(0, 0, 0, 0.3);
-	background: linear-gradient(to bottom, #ffffff 0%, #f0f7f0 100%);
+	background: var(--gradient-title);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -17,7 +17,7 @@
 }
 
 .text__quote {
-	font-family: "Yeseva One", serif;
+	font-family: var(--font-display);
 	font-size: 20px;
 	line-height: 1.4;
 	font-style: italic;
