@@ -1,0 +1,52 @@
+.album {
+	text-align: center;
+}
+
+.album__title {
+	font-family: "Yeseva One", serif;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+h3.album__title {
+	font-size: 14px;
+	color: var(--color-foreground);
+	margin-bottom: var(--spacing-xs);
+	text-align: center;
+	letter-spacing: 4px;
+}
+
+h2.album__title {
+	font-size: 40px;
+	margin-bottom: var(--spacing-xl);
+	letter-spacing: 4px;
+	color: var(--color-accent);
+	text-shadow:
+		0 0 10px rgba(255, 255, 255, 0.2),
+		0 1px 0 rgba(255, 255, 255, 0.6),
+		0 2px 8px rgba(0, 0, 0, 0.4);
+	background: linear-gradient(to bottom, #ffffff 10%, #c4ffd0 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+	h3.album__title {
+		font-size: 16px;
+	}
+
+	h2.album__title {
+		font-size: 72px;
+		margin-bottom: var(--spacing-2xl);
+		letter-spacing: 8px;
+	}
+}
+
+.album__links {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+	max-width: 400px;
+	margin: 0 auto;
+}

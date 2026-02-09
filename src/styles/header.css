@@ -1,0 +1,118 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: var(--color-background);
+	border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: var(--header-height);
+}
+
+.header__logo {
+	color: var(--color-accent);
+	font-size: 18px;
+	letter-spacing: 1px;
+	transition: color var(--transition-fast);
+}
+
+.header__logo:hover {
+	color: var(--color-white);
+}
+
+/* Burger — mobile only */
+.header__menu-btn {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: var(--spacing-xs);
+}
+
+.header__menu-btn span {
+	width: 24px;
+	height: 2px;
+	background-color: var(--color-accent);
+	transition:
+		transform var(--transition-base),
+		opacity var(--transition-base);
+}
+
+.header__menu-btn[aria-expanded="true"] span:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+
+.header__menu-btn[aria-expanded="true"] span:nth-child(2) {
+	opacity: 0;
+}
+
+.header__menu-btn[aria-expanded="true"] span:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Nav — mobile: dropdown */
+.header__nav {
+	position: absolute;
+	top: var(--header-height);
+	left: 0;
+	right: 0;
+	background-color: var(--color-background);
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height var(--transition-base);
+	border-bottom: 1px solid transparent;
+}
+
+.header__nav.is-open {
+	max-height: 300px;
+	border-bottom-color: var(--color-border);
+}
+
+.header__nav-list {
+	display: flex;
+	flex-direction: column;
+	padding: var(--spacing-lg) var(--container-padding);
+	gap: var(--spacing-lg);
+}
+
+.header__nav-link {
+	color: var(--color-text);
+	font-size: 16px;
+	letter-spacing: 1px;
+	transition: color var(--transition-fast);
+}
+
+.header__nav-link:hover,
+.header__nav-link.active {
+	color: var(--color-accent);
+}
+
+/* Desktop: inline nav */
+@media (min-width: 768px) {
+	.header__menu-btn {
+		display: none;
+	}
+
+	.header__nav {
+		position: static;
+		max-height: none;
+		overflow: visible;
+		background-color: transparent;
+		border-bottom: none;
+	}
+
+	.header__nav.is-open {
+		border-bottom: none;
+	}
+
+	.header__nav-list {
+		flex-direction: row;
+		padding: 0;
+		gap: var(--spacing-xl);
+	}
+}
