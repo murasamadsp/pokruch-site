@@ -1,3 +1,5 @@
+"use strict";
+
 // Parallax
 const hero = document.querySelector(".hero");
 const heroBg = document.querySelector(".hero__bg");
