@@ -11,9 +11,9 @@ export default defineConfig({
 	},
 	plugins: [
 		imagemin({
-			mozjpeg: { quality: 65, progressive: true },
+			mozjpeg: { quality: 55, progressive: true },
 			pngquant: {
-				quality: [0.65, 0.8],
+				quality: [0.6, 0.75],
 			},
 			svgo: {
 				plugins: [
