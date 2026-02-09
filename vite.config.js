@@ -3,9 +3,9 @@ import checker from "vite-plugin-checker";
 
 export default defineConfig({
 	root: "src",
-	base: "",
+	base: "/pokruch-site/",
 	build: {
-		outDir: "../docs",
+		outDir: "dist",
 		emptyOutDir: true,
 	},
 	plugins: [
