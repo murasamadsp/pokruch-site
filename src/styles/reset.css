@@ -1,3 +1,8 @@
+/* ================================================
+   CSS RESET & NORMALIZATION
+   ================================================ */
+
+/* Remove default margins from headings and paragraphs */
 h1,
 h2,
 h3,
@@ -8,17 +13,20 @@ p {
 	margin: 0;
 }
 
+/* Reset list styles and spacing */
 ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
+/* Remove default link styling */
 a {
 	color: currentColor;
 	text-decoration: none;
 }
 
+/* Normalize button appearance and inherit font */
 button {
 	font: inherit;
 	color: inherit;
@@ -27,6 +35,7 @@ button {
 	cursor: pointer;
 }
 
+/* Ensure images are responsive and block-level */
 img {
 	display: block;
 	max-width: 100%;

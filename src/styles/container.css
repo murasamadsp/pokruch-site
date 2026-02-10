@@ -1,7 +1,12 @@
+/* ================================================
+   CONTAINER & LAYOUT UTILITIES
+   ================================================ */
+
+/* Main content container with max-width and responsive padding */
 .container {
 	width: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding-left: max(var(--container-padding), env(safe-area-inset-left));
-	padding-right: max(var(--container-padding), env(safe-area-inset-right));
+	padding-inline-start: max(var(--container-padding), env(safe-area-inset-left));
+	padding-inline-end: max(var(--container-padding), env(safe-area-inset-right));
 }

@@ -1,7 +1,13 @@
+/* ================================================
+   ALBUM SECTION
+   ================================================ */
+
+/* Album section wrapper */
 .album {
 	text-align: center;
 }
 
+/* Streaming links container */
 .album__links {
 	display: flex;
 	flex-direction: column;

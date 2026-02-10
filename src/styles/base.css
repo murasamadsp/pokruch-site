@@ -1,30 +1,34 @@
+/* ================================================
+   ROOT VARIABLES & DESIGN SYSTEM
+   ================================================ */
+
 :root {
-	/* Colors — all hex, one format */
+	/* Color Palette — semantic, light-dark contrast */
 	--color-background: #0a0d0a;
 	--color-background-soft: #121612;
 	--color-foreground: #dce7e1;
 	--color-text: #f5faf5;
 	--color-accent: #b0ffb8;
 	--color-white: #fff;
-	--color-border: rgba(170, 189, 179, 0.2);
+	--color-border: rgb(170 189 179 / 0.2);
 
-	/* Layout */
+	/* Layout Constants */
 	--max-width: 1280px;
 	--header-height: 60px;
 
-	/* Typography */
+	/* Typography System */
 	--font-display: "Yeseva One", serif;
 
-	/* Effects */
+	/* Visual Effects & Gradients */
 	--gradient-hero: linear-gradient(to bottom, #ffffff 10%, #c4ffd0 100%);
 	--gradient-title: linear-gradient(to bottom, #ffffff 0%, #f0f7f0 100%);
 	--text-shadow-hero:
-		0 0 10px rgba(255, 255, 255, 0.2),
-		0 1px 0 rgba(255, 255, 255, 0.6),
-		0 2px 8px rgba(0, 0, 0, 0.4),
-		0 4px 12px rgba(0, 0, 0, 0.6);
+		0 0 10px rgb(255 255 255 / 0.2),
+		0 1px 0 rgb(255 255 255 / 0.6),
+		0 2px 8px rgb(0 0 0 / 0.4),
+		0 4px 12px rgb(0 0 0 / 0.6);
 
-	/* Spacing — 8px base */
+	/* Spacing Scale — 8px base unit */
 	--spacing-2xs: 4px;
 	--spacing-xs: 8px;
 	--spacing-sm: 12px;
@@ -35,16 +39,17 @@
 	--spacing-3xl: 64px;
 	--spacing-4xl: 96px;
 
-	/* Responsive */
+	/* Responsive Breakpoints */
 	--container-padding: var(--spacing-md);
-	--section-spacing: var(--spacing-md); /* 16px */
+	--section-spacing: var(--spacing-md); /* 16px base */
 
-	/* Transitions */
+	/* Animation & Transitions */
 	--transition-fast: 0.2s ease;
 	--transition-base: 0.3s ease;
 	--transition-slow: 0.8s ease;
 }
 
+/* Tablet: medium spacing */
 @media (min-width: 768px) {
 	:root {
 		--container-padding: var(--spacing-xl);
@@ -52,6 +57,7 @@
 	}
 }
 
+/* Desktop: large spacing */
 @media (min-width: 1440px) {
 	:root {
 		--container-padding: var(--spacing-3xl);
@@ -59,21 +65,29 @@
 	}
 }
 
+/* ================================================
+   ACCESSIBILITY & BASE STYLES
+   ================================================ */
+
+/* Smooth scrolling with motion preferences respected */
 html {
 	scroll-behavior: smooth;
 }
 
+/* Respect prefers-reduced-motion for users with vestibular disorders */
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
 	}
 }
 
+/* Focus styles for keyboard navigation (WCAG 2.1 Level AA) */
 *:focus-visible {
 	outline: 2px solid var(--color-accent);
 	outline-offset: 3px;
 }
 
+/* Fallback for browsers without :focus-visible support */
 @supports not selector(:focus-visible) {
 	*:focus {
 		outline: 2px solid var(--color-accent);
@@ -81,10 +95,11 @@ html {
 	}
 }
 
+/* Skip to main content link for keyboard users */
 .skip-link {
 	position: absolute;
-	top: var(--spacing-md);
-	left: var(--spacing-md);
+	inset-block-start: var(--spacing-md);
+	inset-inline-start: var(--spacing-md);
 	padding: var(--spacing-xs) var(--spacing-sm);
 	background: var(--color-accent);
 	color: var(--color-background);
@@ -92,53 +107,75 @@ html {
 	transform: translateY(-200%);
 	transition: transform var(--transition-fast);
 	z-index: 1001;
+
+	/* Becomes visible on keyboard focus */
+	&:focus-visible {
+		transform: translateY(0);
+	}
 }
 
-.skip-link:focus-visible {
-	transform: translateY(0);
-}
+/* ================================================
+   DOCUMENT BODY & TYPOGRAPHY
+   ================================================ */
 
+/* Main body styles with safe-area support for notched devices */
 body {
+	/* Typography */
 	font-family: var(--font-display);
 	font-size: 18px;
 	line-height: 1.5;
 	color: var(--color-text);
-	background-color: var(--color-background);
+
+	/* Layout */
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	position: relative;
-	padding-left: env(safe-area-inset-left);
-	padding-right: env(safe-area-inset-right);
+
+	/* Colors & spacing */
+	background-color: var(--color-background);
+	padding-inline-start: env(safe-area-inset-left);
+	padding-inline-end: env(safe-area-inset-right);
+
+	/* Adds subtle noise texture overlay for visual interest */
+	&::before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.12' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+		opacity: 0.02;
+		pointer-events: none;
+		z-index: 9999;
+	}
 }
 
-body::before {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.12' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-	opacity: 0.02;
-	pointer-events: none;
-	z-index: 9999;
-}
 
-
+/* Main content expands to fill available space */
 main {
 	flex-grow: 1;
 }
 
+/* ================================================
+   SECTIONS & LAYOUT
+   ================================================ */
+
+/* Default spacing for all sections */
 section {
-	padding-top: var(--section-spacing);
-	padding-bottom: var(--section-spacing);
+	padding-block: var(--section-spacing);
 }
 
+/* Anchor offset for smooth scrolling with fixed header */
 section[id] {
-	scroll-margin-top: calc(var(--header-height) + var(--spacing-md));
+	scroll-margin-block-start: calc(var(--header-height) + var(--spacing-md));
 }
 
+/* ================================================
+   UTILITY CLASSES
+   ================================================ */
+
+/* Hide content visually but keep it accessible to screen readers */
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -152,11 +189,13 @@ section[id] {
 	overflow: hidden;
 }
 
+/* Scroll reveal animation for sections */
 .reveal {
 	opacity: 0;
 	transition: opacity var(--transition-slow);
-}
 
-.reveal.is-visible {
-	opacity: 1;
+	/* Triggered by IntersectionObserver in JavaScript */
+	&.is-visible {
+		opacity: 1;
+	}
 }
