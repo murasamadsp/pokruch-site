@@ -69,6 +69,7 @@
 /* Smooth scrolling with motion preferences respected */
 html {
 	scroll-behavior: smooth;
+	overflow: hidden;
 }
 
 /* Respect prefers-reduced-motion for users with vestibular disorders */
