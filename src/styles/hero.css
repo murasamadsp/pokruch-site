@@ -21,6 +21,18 @@
 		pointer-events: none;
 		z-index: 1;
 	}
+
+	/* Gradient fade at bottom */
+	&::after {
+		content: "";
+		position: absolute;
+		inset-block-end: 0;
+		inset-inline: 0;
+		height: 80px;
+		background: linear-gradient(to top, var(--color-background), transparent);
+		pointer-events: none;
+		z-index: 1;
+	}
 }
 
 /* Background with parallax effect (moved by JavaScript) */
@@ -76,7 +88,7 @@
 	position: absolute;
 	inset-block-end: 0;
 	inset-inline: 0;
-	z-index: 1;
+	z-index: 2;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
