@@ -119,23 +119,26 @@
 
 /* Main heading with gradient text effect */
 .hero__heading {
-	font-family: var(--font-display);
-	text-transform: uppercase;
-	font-size: 40px;
 	margin: 0;
-	letter-spacing: 4px;
-	color: var(--color-accent);
-	text-shadow: var(--text-shadow-hero);
-	background: linear-gradient(to bottom, #ffffff 0%, #e8f5e8 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	filter: drop-shadow(0 2px 8px rgb(0 0 0 / 0.8)) drop-shadow(0 4px 12px rgb(0 0 0 / 0.6))
-		drop-shadow(0 4px 12px rgb(0 0 0 / 0.6)) drop-shadow(0 2px 6px rgb(0 0 0 / 0.4));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Heading logo image */
+.hero__heading-image {
+	width: 80%;
+	max-width: 400px;
+	height: auto;
+	object-fit: contain;
+	filter: brightness(1.05) drop-shadow(0 0 2px var(--color-background))
+		drop-shadow(0 1px 4px rgb(132 236 142 / 0.15)) drop-shadow(0 2px 8px rgb(0 0 0 / 0.8))
+		drop-shadow(0 4px 12px rgb(0 0 0 / 0.6));
+	display: block;
 
 	@media (min-width: 768px) {
-		font-size: 72px;
-		letter-spacing: 8px;
+		width: 100%;
+		max-width: 600px;
 	}
 }
 
