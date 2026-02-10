@@ -35,7 +35,7 @@
 	}
 }
 
-/* Background with parallax effect (moved by JavaScript) */
+/* Background image */
 .hero__bg {
 	position: absolute;
 	inset: 0;
@@ -52,6 +52,72 @@
 		display: block;
 		user-select: none;
 		pointer-events: none;
+	}
+
+	/* Shimmer layer A — warm tones */
+	&::after {
+		content: "";
+		position: absolute;
+		inset: -25%;
+		width: 150%;
+		height: 150%;
+		background:
+			radial-gradient(ellipse 60% 30% at 20% 25%, rgb(200 190 120 / 0.15), transparent 55%),
+			radial-gradient(ellipse 25% 55% at 80% 70%, rgb(180 230 140 / 0.135), transparent 55%),
+			radial-gradient(ellipse 45% 20% at 55% 50%, rgb(220 200 130 / 0.12), transparent 55%);
+		animation: shimmer-a 20s ease-in-out infinite;
+		pointer-events: none;
+	}
+}
+
+/* Shimmer layer B — cool tones, on hero directly */
+.hero > .hero__bg + .hero__content::before {
+	content: "";
+	position: fixed;
+	inset: -25%;
+	width: 150%;
+	height: 150%;
+	background:
+		radial-gradient(ellipse 30% 60% at 35% 65%, rgb(100 190 180 / 0.135), transparent 55%),
+		radial-gradient(ellipse 55% 25% at 70% 30%, rgb(140 170 200 / 0.12), transparent 55%);
+	animation: shimmer-b 28s ease-in-out infinite;
+	pointer-events: none;
+	z-index: -1;
+}
+
+@keyframes shimmer-a {
+	0% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+
+	30% {
+		transform: translate(10%, -7%) rotate(1.2deg);
+	}
+
+	60% {
+		transform: translate(-8%, 10%) rotate(-0.8deg);
+	}
+
+	100% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+}
+
+@keyframes shimmer-b {
+	0% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+
+	35% {
+		transform: translate(-7%, 8%) rotate(-1deg);
+	}
+
+	65% {
+		transform: translate(9%, -6%) rotate(0.7deg);
+	}
+
+	100% {
+		transform: translate(0, 0) rotate(0deg);
 	}
 }
 
