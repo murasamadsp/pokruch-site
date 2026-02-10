@@ -55,7 +55,7 @@
 	/* Interactive state */
 	&:hover,
 	&:active {
-		color: var(--color-white);
+		color: rgb(255 255 255 / 0.7);
 	}
 }
 
@@ -129,6 +129,6 @@
 	&:hover,
 	&:active,
 	&.active {
-		color: var(--color-accent);
+		color: rgb(180 255 184 / 0.8);
 	}
 }

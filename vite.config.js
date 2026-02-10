@@ -16,9 +16,7 @@ export default defineConfig({
 				quality: [0.6, 0.75],
 			},
 			svgo: {
-				plugins: [
-					{ name: "removeEmptyAttrs" },
-				],
+				plugins: [{ name: "removeEmptyAttrs" }],
 			},
 		}),
 		/*

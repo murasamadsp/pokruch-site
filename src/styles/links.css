@@ -52,10 +52,10 @@
 	&:active {
 		border-color: var(--color-accent);
 		color: var(--color-background);
-		background-color: var(--color-accent);
-		letter-spacing: 3px;
-		transform: scale(1.02);
-		box-shadow: 0 4px 15px rgb(132 236 142 / 0.2);
+		background-color: rgb(132 236 142 / 0.6);
+		letter-spacing: 2.5px;
+		transform: scale(1.01);
+		box-shadow: 0 4px 15px rgb(132 236 142 / 0.1);
 	}
 
 	@media (min-width: 768px) {

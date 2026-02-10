@@ -30,7 +30,7 @@
 
 		<link rel="preload" as="image" href="assets/images/logos/pkrch.png" >
 		<link rel="preload" as="image" href="assets/images/backgrounds/hero.webp" type="image/webp" >
-	<link rel="preconnect" href="https://fonts.googleapis.com" >
+		<link rel="preconnect" href="https://fonts.googleapis.com" >
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
 		<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet" >
 
@@ -64,12 +64,7 @@
 						<li><a href="#tracks" class="header__nav-link">Треки</a></li>
 					</ul>
 				</nav>
-				<button
-					class="header__menu-btn"
-					id="menuBtn"
-					aria-label="Меню"
-					aria-expanded="false"
-					aria-controls="headerNav">
+				<button class="header__menu-btn" id="menuBtn" aria-label="Меню" aria-expanded="false" aria-controls="headerNav">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -102,29 +97,40 @@
 					</h1>
 					<h3 class="hero__subtitle">Презентує альбом</h3>
 					<h2 class="hero__heading">ПКРЧ Голосними</h2>
-				</div>
-			</section>
 
-			<section id="listen" class="album container">
-				<div class="album__links">
-					<a href="https://open.spotify.com" class="links__item" target="_blank" rel="noopener noreferrer">
-						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-							<use href="assets/images/icons/sprite.svg#spotify"></use>
-						</svg>
-						Spotify
-					</a>
-					<a href="https://music.apple.com" class="links__item" target="_blank" rel="noopener noreferrer">
-						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-							<use href="assets/images/icons/sprite.svg#apple-music"></use>
-						</svg>
-						Apple Music
-					</a>
-					<a href="https://music.youtube.com" class="links__item" target="_blank" rel="noopener noreferrer">
-						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-							<use href="assets/images/icons/sprite.svg#youtube-music"></use>
-						</svg>
-						YouTube Music
-					</a>
+					<!-- Streaming links with icons only -->
+					<div class="hero__links">
+						<a
+							href="https://open.spotify.com"
+							class="hero__link"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Spotify">
+							<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+								<use href="assets/images/icons/sprite.svg#spotify"></use>
+							</svg>
+						</a>
+						<a
+							href="https://music.apple.com"
+							class="hero__link"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Apple Music">
+							<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+								<use href="assets/images/icons/sprite.svg#apple-music"></use>
+							</svg>
+						</a>
+						<a
+							href="https://music.youtube.com"
+							class="hero__link"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="YouTube Music">
+							<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+								<use href="assets/images/icons/sprite.svg#youtube-music"></use>
+							</svg>
+						</a>
+					</div>
 				</div>
 			</section>
 
@@ -134,7 +140,8 @@
 					«Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата.»
 				</blockquote>
 				<p class="text__description">
-					Тут буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом...
+					Тут буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом. Тут
+					буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом...
 				</p>
 			</section>
 
@@ -229,6 +236,29 @@
 						<h3 class="track__title">3019</h3>
 					</div>
 					<p class="track__description">Опис треку з'явиться згодом.</p>
+				</div>
+			</section>
+
+			<section id="listen" class="album container">
+				<div class="album__links">
+					<a href="https://open.spotify.com" class="links__item" target="_blank" rel="noopener noreferrer">
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+							<use href="assets/images/icons/sprite.svg#spotify"></use>
+						</svg>
+						Spotify
+					</a>
+					<a href="https://music.apple.com" class="links__item" target="_blank" rel="noopener noreferrer">
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+							<use href="assets/images/icons/sprite.svg#apple-music"></use>
+						</svg>
+						Apple Music
+					</a>
+					<a href="https://music.youtube.com" class="links__item" target="_blank" rel="noopener noreferrer">
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+							<use href="assets/images/icons/sprite.svg#youtube-music"></use>
+						</svg>
+						YouTube Music
+					</a>
 				</div>
 			</section>
 		</main>

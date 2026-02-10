@@ -23,9 +23,7 @@
 	--gradient-hero: linear-gradient(to bottom, #ffffff 10%, #c4ffd0 100%);
 	--gradient-title: linear-gradient(to bottom, #ffffff 0%, #f0f7f0 100%);
 	--text-shadow-hero:
-		0 0 10px rgb(255 255 255 / 0.2),
-		0 1px 0 rgb(255 255 255 / 0.6),
-		0 2px 8px rgb(0 0 0 / 0.4),
+		0 0 10px rgb(255 255 255 / 0.2), 0 1px 0 rgb(255 255 255 / 0.6), 0 2px 8px rgb(0 0 0 / 0.4),
 		0 4px 12px rgb(0 0 0 / 0.6);
 
 	/* Spacing Scale — 8px base unit */
@@ -150,7 +148,6 @@ body {
 		z-index: 9999;
 	}
 }
-
 
 /* Main content expands to fill available space */
 main {
