@@ -14,7 +14,6 @@
 
 	/* Layout Constants */
 	--max-width: 1280px;
-	--header-height: 60px;
 
 	/* Typography System */
 	--font-display: "Yeseva One", serif;
@@ -125,8 +124,6 @@ body {
 	color: var(--color-text);
 
 	/* Layout */
-	display: grid;
-	grid-template-rows: 1fr auto;
 	min-height: 100vh;
 	position: relative;
 
@@ -151,20 +148,6 @@ body {
 
 
 /* ================================================
-   SECTIONS & LAYOUT
-   ================================================ */
-
-/* Default spacing for all sections */
-section {
-	padding-block: var(--section-spacing);
-}
-
-/* Anchor offset for smooth scrolling with fixed header */
-section[id] {
-	scroll-margin-block-start: calc(var(--header-height) + var(--spacing-md));
-}
-
-/* ================================================
    UTILITY CLASSES
    ================================================ */
 
@@ -182,13 +165,3 @@ section[id] {
 	overflow: hidden;
 }
 
-/* Scroll reveal animation for sections */
-.reveal {
-	opacity: 0;
-	transition: opacity var(--transition-slow);
-
-	/* Triggered by IntersectionObserver in JavaScript */
-	&.is-visible {
-		opacity: 1;
-	}
-}
