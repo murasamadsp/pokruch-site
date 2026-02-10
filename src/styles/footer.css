@@ -47,6 +47,32 @@
 	}
 }
 
+/* Email link */
+.footer__email {
+	color: var(--color-foreground);
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	transition:
+		color var(--transition-fast),
+		text-decoration-color var(--transition-fast);
+	text-decoration: underline;
+	text-decoration-color: rgb(132 236 142 / 0.3);
+
+	&:hover,
+	&:active {
+		color: var(--color-accent);
+		text-decoration-color: var(--color-accent);
+	}
+
+	@media (min-width: 768px) {
+		font-size: 16px;
+	}
+
+	@media (min-width: 1440px) {
+		font-size: 18px;
+	}
+}
+
 /* Social links container */
 .footer__links {
 	display: flex;
