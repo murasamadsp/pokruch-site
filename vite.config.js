@@ -4,7 +4,7 @@ import imagemin from "vite-plugin-imagemin";
 
 export default defineConfig({
 	root: "src",
-	base: "/pokruch-site/",
+	base: "/",
 	build: {
 		outDir: "../dist",
 		emptyOutDir: true,
