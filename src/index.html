@@ -51,26 +51,6 @@
 		</script>
 	</head>
 	<body>
-		<a class="skip-link" href="#main">Перейти до основного контенту</a>
-		<header class="header visually-hidden">
-			<div class="container header__inner">
-				<a href="/" class="header__logo">Покруч</a>
-				<nav class="header__nav" id="headerNav" aria-label="Основна навігація">
-					<ul class="header__nav-list">
-						<li><a href="#music" class="header__nav-link">Головна</a></li>
-						<li><a href="#listen" class="header__nav-link">Слухати</a></li>
-						<!-- <li><a href="#about" class="header__nav-link">Про альбом</a></li>
-						<li><a href="#tracks" class="header__nav-link">Треки</a></li> -->
-					</ul>
-				</nav>
-				<button class="header__menu-btn" id="menuBtn" aria-label="Меню" aria-expanded="false" aria-controls="headerNav">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
-			</div>
-		</header>
-
 		<main id="main">
 			<section id="music" class="hero">
 				<picture class="hero__bg" aria-hidden="true">
@@ -78,23 +58,12 @@
 					<img
 						src="assets/images/backgrounds/hero.jpg"
 						alt=""
-						width="7000"
-						height="3500"
+						width="2560"
+						height="1280"
 						fetchpriority="high"
 						decoding="async" >
 				</picture>
 				<div class="hero__content">
-					<!-- <h1 class="hero__title">
-						<img
-							class="hero__image"
-							src="assets/images/logos/pkrch.png"
-							alt="Покруч"
-							width="2265"
-							height="594"
-							fetchpriority="high"
-							decoding="async" >
-					</h1>
-					<h3 class="hero__subtitle">Презентує альбом</h3> -->
 					<h2 class="hero__heading">
 						<img
 							class="hero__heading-image"
@@ -167,141 +136,13 @@
 						</svg>
 					</a>
 				</div>
-				<footer class="hero__footer">
-					<p class="hero__footer-text">Покруч © 2026</p>
-					<a href="mailto:pokruchsad@gmail.com" class="hero__footer-email">pokruchsad@gmail.com</a>
-				</footer>
+				<a href="mailto:pokruchsad@gmail.com" class="hero__email-btn">
+					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+						<use href="assets/images/icons/sprite.svg#email"></use>
+					</svg>
+					<span>pokruchsad@gmail.com</span>
+				</a>
 			</section>
-
-			<!-- <section id="about" class="text container">
-				<h2 class="text__title">Про альбом</h2>
-				<blockquote class="text__quote">
-					«Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата. Цитата.»
-				</blockquote>
-				<p class="text__description">
-					Тут буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом. Тут
-					буде текст про альбом. Тут буде текст про альбом. Тут буде текст про альбом...
-				</p>
-			</section> -->
-
-			<!-- <section id="tracks" class="tracklist container">
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">01.</span>
-						<h3 class="track__title">Велкам</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">02.</span>
-						<h3 class="track__title">Чума</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">03.</span>
-						<h3 class="track__title">Руки</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">04.</span>
-						<h3 class="track__title">Сон це</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">05.</span>
-						<h3 class="track__title">969-й км.</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">06.</span>
-						<h3 class="track__title">Танго</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">07.</span>
-						<h3 class="track__title">М11У4Л7</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">08.</span>
-						<h3 class="track__title">Ганг</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">09.</span>
-						<h3 class="track__title">40138H</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">10.</span>
-						<h3 class="track__title">Авангард</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">11.</span>
-						<h3 class="track__title">56626252</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">12.</span>
-						<h3 class="track__title">Весна</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-				<div class="track">
-					<div class="track__header">
-						<span class="track__number">13.</span>
-						<h3 class="track__title">3019</h3>
-					</div>
-					<p class="track__description">Опис треку з'явиться згодом.</p>
-				</div>
-			</section> -->
-
-		<!-- <section id="listen" class="album container">
-			<div class="album__links">
-				<a href="https://open.spotify.com" class="links__item" target="_blank" rel="noopener noreferrer">
-					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-						<use href="assets/images/icons/sprite.svg#spotify"></use>
-					</svg>
-					Spotify
-				</a>
-				<a href="https://music.apple.com" class="links__item" target="_blank" rel="noopener noreferrer">
-					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-						<use href="assets/images/icons/sprite.svg#apple-music"></use>
-					</svg>
-					Apple Music
-				</a>
-				<a href="https://music.youtube.com" class="links__item" target="_blank" rel="noopener noreferrer">
-					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-						<use href="assets/images/icons/sprite.svg#youtube-music"></use>
-					</svg>
-					YouTube Music
-				</a>
-			</div>
-		</section> -->
-	</main>
-
-		<!-- <script type="module" src="main.js"></script> -->
+		</main>
 	</body>
 </html>
